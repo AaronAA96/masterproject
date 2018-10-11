@@ -1,21 +1,19 @@
 {
-  "name": "masterproject",
+  "name": "expressjs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server index.js"
-  },
-  "author": "Aaron Ellis",
-  "license": "ISC",
   "dependencies": {
-    "npm": "^6.4.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "webpack-cli": "^3.1.2"
+    "express": "^4.16.3",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.3.2",
+    "pug": "^2.0.3"
   },
-  "devDependencies": {
-    "webpack": "^4.20.2",
-    "webpack-dev-server": "^3.1.9"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
