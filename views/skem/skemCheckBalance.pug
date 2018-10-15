@@ -1,6 +1,39 @@
 html
   head
     title= title
+    style
+      include ../../styles/styles.css
+    
   body
     a(href="/skem") HOME
     h1= message
+
+#CheckBody
+  #RowOne
+    #address
+      p
+        | Mr Henry Pickford, 
+        br
+        |  13 More Street, 
+        br
+        |             York, 
+        br
+        |  Yorkshire, 
+        br
+        |  YO6 2LD
+    h1#checkTitle National Bank of Hallam
+    #Entry DATE PICKER
+  #RowTwo
+    #Entry Add New Recepient
+  #RowThree
+    #Entry Enter Name Here
+    #Entry Account Number
+    #Entry Sort Code
+  #RowFour
+    p Message: 
+    #Entry
+    p Amount: &pound;
+    #Entry
+  #RowFive
+    p 02984765634 574987 789 39875
+    #Checkbutton Confirm Transfer Payment

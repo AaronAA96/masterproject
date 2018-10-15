@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "mongod": "^2.0.0",
-    "mongoose": "^5.3.2",
+    "mongoose": "^5.3.3",
     "pug": "^2.0.3"
   },
   "devDependencies": {},

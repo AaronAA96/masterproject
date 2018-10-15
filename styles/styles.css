@@ -1,0 +1,98 @@
+#CheckBody {
+    width: 800px;
+    height: 350px;
+    border: 20px solid #00bcd4;
+    Background-color: #eeff8f;
+    display: inline-block;
+}
+#Entry {
+    background-color: white;
+    border: 1px solid black;
+    width: 150px;
+    padding: 5px;
+    display: inline-block;
+}
+#RowOne {
+    height: 50px;
+    width: 800px;
+    display: inline-block;
+}
+#RowOne p {
+    width: 120px;
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+#RowTwo {
+    padding: 20px 20px 0px 20px;
+    display: inline-block;
+    width: 800px;
+}
+#RowTwo #Entry {
+    margin-right: 20px;
+    width: 200px;
+}
+#RowThree {
+    height: 50px;
+    padding: 20px 0px 0px 20px;
+    display: inline-block;
+    width: 800px;
+}
+#RowThree #Entry {
+    margin-right: 20px;
+    width: 200px;
+}
+#RowFour {
+    height: 60px;
+    width: 800px;
+    display: inline-block;
+    padding: 0px 0px 10px 10px;
+}
+#RowFour p {
+    width: 120px;
+    display: inline-block;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+#RowFour #Entry {
+    margin-right: 40px;
+    width: 200px;
+    height: 15px;
+}
+#RowFive {
+    height: 100px;
+    display: inline-block;
+    width: 800px;
+    padding: 0px 0px 0px 20px;
+}
+#RowFive p {
+    display: inline-block;
+    font-size: 26px;
+    padding-bottom: 10px;
+    width: 400px;
+}
+#RowFive #Checkbutton {
+    font-size: 20px;
+    padding: 0px 50px 0px 10px;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    width: 300px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 7px;
+    text-align:center;
+}
+#address {
+    size: 12px;
+    font-size: 13px;
+    padding: 0px 0px 0px 10px;
+    display: inline-block;
+}
+
+#checkTitle {
+    display: inline-block;
+    padding: 0px 30px 90px 100px;
+    font: SourceSansPro;
+}
+
