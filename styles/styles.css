@@ -1,9 +1,24 @@
+body {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #f5f5f5;
+}
+body h1 {
+    text-align: center;
+}
+
+
+/* ******************************* Check Book ************************************** */
+
 #CheckBody {
     width: 800px;
     height: 350px;
     border: 20px solid #00bcd4;
     Background-color: #eeff8f;
     display: inline-block;
+    margin-left: 13%;
+    
 }
 #Entry {
     background-color: white;
@@ -29,6 +44,7 @@
     width: 800px;
 }
 #RowTwo #Entry {
+    margin-top: 30px;
     margin-right: 20px;
     width: 200px;
 }
@@ -96,3 +112,70 @@
     font: SourceSansPro;
 }
 
+/* ******************************* Address Book ************************************** */
+
+#AddressBook {
+    display: inline-block;
+    background-color: #89632c;
+    border-radius: 30px;
+    margin-left: 13%;
+
+}
+#AddressBookLeft {
+    Width: 400px;
+    height: 500px;
+    background-color: #eeff8f;
+    border: 10px solid #89632c;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-left-width: 20px;
+    border-right-width: 1px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+}
+#AddressBookRight {
+    Width: 400px;
+    height: 500px;
+    background-color: #eeff8f;
+    border: 10px solid #89632c;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right-width: 20px;
+    border-left-width: 1px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+}
+#ArrowBoxLeft {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc08f;
+    border-top-left-radius: 10px;
+    margin-right: 300px;
+}
+#ArrowBoxRight {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc08f;
+    border-top-right-radius: 10px;
+    margin-left: 300px;
+}
+#Information {
+    Margin-left: 50px;
+    Margin-top: 50px;
+    font-size: 28px;
+}
+#AddressBookButton {
+    height: 50px;
+    width: 250px;
+    Margin-left: 50px;
+    Margin-top: 50px;
+    border-radius: 30px;
+    font-size: 50px;
+    background-color: white;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}

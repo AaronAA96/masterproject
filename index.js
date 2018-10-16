@@ -47,7 +47,7 @@ app.get('/skem/checkbalance', function(req, res) {
 })
 
 app.get('/skem/transferpayment', function(req, res) {
-  res.render('skem/skemCheckBalance',{ title: 'Hallam Banking', message: 'Transfer Payment'})
+  res.render('skem/skemTransferPayment',{ title: 'Hallam Banking', message: 'Transfer Payment'})
 })
 
 
