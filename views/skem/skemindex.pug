@@ -8,10 +8,23 @@ html
     h1= message
     div
       h1 what account would you like to use?
-      div(style={color: 'red', background: 'green'})
-        a Current account
-        a Savings account
-        a ISA account
+      #MiniBankBookOpen
+        p Current Account
+        br
+        p Current amount: &pound;430.24
+        br
+        p Current value: &pound;430.24
+        br
+      #MiniBankBookClosed
+        p Current Account
+        br
+        p Current amount: &pound;430.24
+        br
+      #MiniBankBookClosed
+        p Current Account
+        br
+        p Current amount: &pound;430.24
+        br
       h1 What service would you like to use?
       div(style={color: 'red', background: 'green'})
         a(href="/skem/checkbalance") Check Balance
