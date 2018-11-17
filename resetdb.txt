@@ -1,0 +1,10 @@
+
+
+db.Accounts.insert({AccountName: 'Savings Account', CurrentAmount: '2000', AvaliableAmount: '2000'})
+db.Accounts.insert({AccountName: 'Current Account', CurrentAmount: '500', AvaliableAmount: '400'})
+
+db.People.insert({Name: 'John Button', SortCode: '12-72-94', AccountNumber: '09572849'})
+db.People.insert({Name: 'Angela Mason', SortCode: '34-82-34', AccountNumber: '29478545'})
+db.People.insert({Name: 'Bill White', SortCode: '94-63-67', AccountNumber: '74291845'})
+db.People.insert({Name: 'Margert Topkins', SortCode: '83-53-75', AccountNumber: '57485769'})
+

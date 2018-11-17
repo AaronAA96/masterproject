@@ -1,6 +1,31 @@
 html
   head
     title= title
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
   body
-    a(href="/nonskem") HOME
-    h1= message
+    div.container
+      a.btn.btn-primary(href="/nonskem") HOME
+      h1 #{account.AccountName}
+      h1.text-center= message
+      form(method="POST" action='' enctype='application/json')
+        .form-group
+          label Account Name
+          input.form-control(type='text' placeholder='Enter Name Here' name='Recipient')
+          small#emailHelp.form-text.text-muted Enter the Account Name Here.
+        .form-group
+          label Account Number
+          input.form-control(type='text' placeholder='Enter Account Number' name='AccountNumber')
+          small#emailHelp.form-text.text-muted Enter the Account Number Here.
+        .form-group
+          label Sort Code
+          input.form-control(type='text' placeholder='Enter Sort Code' name='SortCode')
+          small#emailHelp.form-text.text-muted Enter the Sort Code Here.
+        .form-group
+          label Amount
+          input.form-control(type='number' placeholder='Enter Amount' name='AmountDue' min="0" value="0")
+          small#emailHelp.form-text.text-muted Enter the Amount Here.
+        .form-group
+          label Message
+          input.form-control(type='text' placeholder='Enter Message' name='Message')
+          small#emailHelp.form-text.text-muted Enter the Message Here.
+        button.btn.btn-primary(type='submit') Submit

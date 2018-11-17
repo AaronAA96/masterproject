@@ -1,16 +1,23 @@
 html
   head
     title= title
+    
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
   body
-    h1= message
+  div.container
+    h1.text-center= message
     div
-      h1 what account would you like to use?
-      div(style={color: 'red', background: 'green'})
-        a Current account
-        a Savings account
-        a ISA account
-      h1 What service would you like to use?
-      div(style={color: 'red', background: 'green'})
-        a(href="/nonskem/checkbalance") Check Balance
-        a(href="/nonskem/TransferPayment") Transfer Payment
-        a(href="/nonskem/checkbalance") Standing order????
+      h1.w-100.text-center What account would you like to use?
+      div
+        each val in accounts
+          .card.w-100
+            .card-body
+              h5.card-title #{val.AccountName}
+              p.card-text Current Amount: &pound;#{val.CurrentAmount}
+              a.btn.btn-primary(href='/nonskem/checkbalance/' + val.AccountID) Check Balance
+              br
+              br
+              a.btn.btn-danger(href='/nonskem/transferpayment/'+ + val.AccountID) Transfer Payment   
+          br
+         
+        

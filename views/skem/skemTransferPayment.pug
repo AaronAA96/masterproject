@@ -1,66 +1,78 @@
 html
   head
     title= title
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+ 
+
     style
       include ../../styles/styles.css
     
   body
-    a(href="/skem") HOME
-    h1= message
+    div.container
+      a(href="/skem") 
+        button#HomeButton HOME
+      h1 #{account.AccountName}
+      h1= message
+      
+      form(method="POST" action='' enctype='application/json')
+        #CheckBody
+          #RowOne
+            #address
+              p
+                | Mr Henry Pickford, 
+                br
+                |  13 More Street, 
+                br
+                |             York, 
+                br
+                |  Yorkshire, 
+                br
+                |  YO6 2LD
+          
+            h1#checkTitle National Bank of Hallam
+            input#Entry(type='date' name='Created_date' value='2018-11-15' )
+          #RowTwo
+            #Entry Add New Recepient
+          #RowThree
+              .form-group
+                p Name:
+                input#Entry(type='text' placeholder='Enter Name Here' name='Recipient')
+                p Account Number: 
+                input#Entry(type='text' placeholder='Enter Account Number' name='AccountNumber') 
+                p Sort Code: 
+                input#Entry(type='text' placeholder='Enter Sort Code' name='SortCode') 
+          #RowFour
+            p Message: 
+            input#Entry(type='text' placeholder='Enter Message' name='Message') 
+            p Amount: &pound;
+            input#Entry(type='number' placeholder='Enter Amount' name='Amount' min="0" value="0")
+          #RowFive
+            p 02984765634 574987 789 39875
+            button#Checkbutton Confirm Transfer Payment
 
-    #CheckBody
-      #RowOne
-        #address
-          p
-            | Mr Henry Pickford, 
-            br
-            |  13 More Street, 
-            br
-            |             York, 
-            br
-            |  Yorkshire, 
-            br
-            |  YO6 2LD
-        h1#checkTitle National Bank of Hallam
-        #Entry DATE PICKER
-      #RowTwo
-        #Entry Add New Recepient
-      #RowThree
-        #Entry Enter Name Here
-        #Entry Account Number
-        #Entry Sort Code
-      #RowFour
-        p Message: 
-        #Entry
-        p Amount: &pound;
-        #Entry
-      #RowFive
-        p 02984765634 574987 789 39875
-        #Checkbutton Confirm Transfer Payment
-
-  h1 Address Book
-  #AddressBook
-    #AddressBookLeft
-      #ArrowBoxLeft
-      #Information
-        | Name: Aaron Ellis 
-        br
-        br
-        |                 Account Number: 12345678 
-        br
-        br
-        |                 Sort code: 12-34-56
-      #AddressBookButton
-        | Select
-    #AddressBookRight
-      #ArrowBoxRight
-      #Information
-        | Name: James Ellis 
-        br
-        br
-        |                 Account Number: 12345678 
-        br
-        br
-        |                 Sort code: 12-34-56
-      #AddressBookButton
-        | Select
+    h1 Address Book
+    #AddressBook
+      #AddressBookLeft
+        #ArrowBoxLeft
+        #Information
+          | Name: Aaron Ellis 
+          br
+          br
+          |                 Account Number: 12345678 
+          br
+          br
+          |                 Sort code: 12-34-56
+        #AddressBookButton
+          | Select
+      #AddressBookRight
+        #ArrowBoxRight
+        #Information
+          | Name: James Ellis 
+          br
+          br
+          |                 Account Number: 12345678 
+          br
+          br
+          |                 Sort code: 12-34-56
+        #AddressBookButton
+          | Select

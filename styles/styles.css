@@ -1,19 +1,29 @@
+/* ******************************* General Stuff ************************************** */
+
 body {
     display: block;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: #00bcd4;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eedfde;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 body h1 {
     text-align: center;
+}
+
+#HomeButton {
+    border-radius: 5px;
+    background-color: #3f51b5;
+    color: white;
+    width: 200px;
+    height: 100px;
 }
 
 
 /* ******************************* Check Book ************************************** */
 
 #CheckBody {
-    width: 800px;
+    width: 900px;
     height: 350px;
     border: 20px solid #00bcd4;
     Background-color: #eeff8f;
@@ -30,7 +40,7 @@ body h1 {
 }
 #RowOne {
     height: 50px;
-    width: 800px;
+    width: 900px;
     display: inline-block;
 }
 #RowOne p {
@@ -42,44 +52,68 @@ body h1 {
 #RowTwo {
     padding: 20px 20px 0px 20px;
     display: inline-block;
-    width: 800px;
+    width: 900px;
 }
 #RowTwo #Entry {
+    display: inline-block;
     margin-top: 30px;
     margin-right: 20px;
     width: 200px;
 }
 #RowThree {
     height: 50px;
-    padding: 20px 0px 0px 20px;
+    padding: 5px 0px 0px 5px;
     display: inline-block;
-    width: 800px;
+    width: 900px;
 }
-#RowThree #Entry {
-    margin-right: 20px;
-    width: 200px;
-}
-#RowFour {
-    height: 60px;
-    width: 800px;
-    display: inline-block;
-    padding: 0px 0px 10px 10px;
-}
+
 #RowFour p {
     width: 120px;
     display: inline-block;
     font-size: 26px;
     padding-bottom: 10px;
 }
+
+#RowThree #Entry {
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+}
+#RowFour {
+    height: 70px;
+    width: 900px;
+    display: inline-block;
+    padding: 0px 0px 10px 10px;
+}
+#RowFour p {
+    width: 130px;
+    display: inline-block;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+#RowFour .form-group p {
+    width:50px;
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+#RowThree .form-group p {
+    width:75px;
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
 #RowFour #Entry {
+    display: inline-block;
     margin-right: 40px;
     width: 200px;
-    height: 15px;
 }
 #RowFive {
-    height: 100px;
+    height: 70px;
     display: inline-block;
-    width: 800px;
+    width: 900px;
     padding: 0px 0px 0px 20px;
 }
 #RowFive p {
@@ -87,6 +121,7 @@ body h1 {
     font-size: 26px;
     padding-bottom: 10px;
     width: 400px;
+    padding-right: 130px;
 }
 #RowFive #Checkbutton {
     font-size: 20px;
@@ -96,12 +131,10 @@ body h1 {
     border: 1px solid black;
     width: 300px;
     padding: 5px;
-    display: inline-block;
     border-radius: 7px;
     text-align:center;
 }
 #address {
-    size: 12px;
     font-size: 13px;
     padding: 0px 0px 0px 10px;
     display: inline-block;
@@ -109,8 +142,10 @@ body h1 {
 
 #checkTitle {
     display: inline-block;
-    padding: 0px 30px 90px 100px;
+    padding: 0px 70px 0px 220px;
     font: SourceSansPro;
+    font-size: 40px;
+    padding-bottom: 20px;
 }
 
 /* ******************************* Address Book ************************************** */
@@ -181,24 +216,234 @@ body h1 {
     text-align: center;
 }
 
-/* ******************************* MiniBank Book ************************************** */
 
-#MiniBankBookOpen {
+
+/* ******************************* CheckBalance Book ************************************** */
+
+#CheckBalanceBook {
+    display: inline-block;
+    background-color: #89632c;
+    border-radius: 30px;
+    margin-left: 13%;
+
+}
+#CheckBalanceLeft {
+    Width: 400px;
+    height: 800px;
+    background-color: #eeff8f;
+    border: 10px solid #89632c;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-left-width: 20px;
+    border-right-width: 1px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+}
+#CheckBalanceRight {
+    Width: 400px;
+    height: 800px;
+    background-color: #eeff8f;
+    border: 10px solid #89632c;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right-width: 20px;
+    border-left-width: 1px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+}
+#CheckBalanceArrowBoxLeft {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc08f;
+    border-top-left-radius: 10px;
+    margin-right: 300px;
+}
+#CheckBalanceArrowBoxRight {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc08f;
+    border-top-right-radius: 10px;
+    margin-left: 300px;
+}
+#CheckBalanceInformation {
+    display: inline-block;
+}
+#CheckBalanceButton {
+    height: 50px;
+    width: 250px;
+    Margin-left: 50px;
+    Margin-top: 50px;
+    border-radius: 30px;
+    font-size: 50px;
+    background-color: white;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#LeftBlueBar {
+    Width: 400px;
+    height: 80px;
+    background-color:#00bcd4;
+    display: inline-block;
+}
+
+#BlueDate {
+    Width: 100px;
+    height: 80px;
+    border-right: 2px solid #000000;
+    background-color:#00bcd4;
+    display: inline-block;
+    text-align: center;
+}
+
+#BlueDate p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BlueType {
+    Width: 100px;
+    height: 80px;
+    border-right: 2px solid #000000;
+    background-color:#00bcd4;
+    display: inline-block;
+    text-align: center;
+}
+
+#BlueType p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BlueCompanies {
+    Width: 196px;
+    height: 80px;
+    background-color:#00bcd4;
+    display:inline-block;
+    text-align: center;
+}
+
+#BlueCompanies p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BlueBeginningAmount {
+    Width: 140px;
+    height: 80px;
+    border-right: 2px solid #000000;
+    background-color:#00bcd4;
+    display: inline-block;
+    text-align: center;
+}
+
+#BlueBeginningAmount p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BlueAmountDue {
+    Width: 100px;
+    height: 80px;
+    border-right: 2px solid #000000;
+    background-color:#00bcd4;
+    display: inline-block;
+    text-align: center;
+}
+
+#BlueAmountDue p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#BlueBalance {
+    Width: 156px;
+    height: 80px;
+    background-color:#00bcd4;
+    display:inline-block;
+    text-align: center;
+}
+
+#BlueBalance p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#DateStrip {
+    height: 620px;
+    Width: 100px;
+    border-right: 2px solid #000000;
+    background-color: white;
+    display: inline-block;
+    border-bottom-left-radius: 20px;
+}
+
+#TypeStrip {
+    height: 620px;
+    Width: 100px;
+    border-right: 2px solid #000000;
+    background-color: white;
+    display: inline-block;
+}
+
+#CompaniesStrip {
+    height: 620px;
+    width: 196px;
+    background-color: white;
+    display: inline-block;
+}
+
+#BeginningAmountStrip {
+    height: 620px;
+    width: 140px;
+    border-right: 2px solid #000000;
+    background-color: white;
+    display: inline-block;
+}
+
+#AmountDueStrip {
+    height: 620px;
+    Width: 100px;
+    border-right: 2px solid #000000;
+    background-color: white;
+    display: inline-block;
+}
+
+#BalanceStrip {
+    height: 620px;
+    width: 156px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    display: inline-block;
+}
+
+/* ******************************* 1 - MiniBank Book ************************************** */
+
+#MiniBankBookOpen1 {
     width:350px;
     height:200px;
     background-color: #eeff8f;
     border-radius: 20px;
-    border: 2px solid black;
+    border: 10px solid #89632c;
+    border-bottom: 4px solid #89632c;
+    border-top: 4px solid #89632c;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     text-align: center;
-    font-size: 20px;
+    /* font-size: 20px; */
     display: inline-block;
-    Margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-/* #MiniBankBookOpen p {
+/* #MiniBankBookOpen1 p {
     
 } */
 
-#MiniBankBookClosed {
+#MiniBankBookClosed1 {
     width:175px;
     height:200px;
     background-color: #3f51b5;
@@ -208,13 +453,102 @@ body h1 {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     text-align: center;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #eeff8f;
     display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* #MiniBankBookClosed1 p {
+    Margin: 20px;
+} */
+
+/* ******************************* 2 - MiniBank Book ************************************** */
+
+#MiniBankBookOpen2 {
+    width:350px;
+    height:200px;
+    background-color: #eeff8f;
+    border-radius: 20px;
+    border: 10px solid #89632c;
+    border-bottom: 4px solid #89632c;
+    border-top: 4px solid #89632c;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    /* font-size: 20px; */
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
     Margin-right: 100px;
 }
-#MiniBankBookClosed p {
+/* #MiniBankBookOpen2 p {
+    
+} */
+
+#MiniBankBookClosed2 {
+    width:175px;
+    height:200px;
+    background-color: #3f51b5;
+    border-radius: 20px;
+    border: 2px solid black;
+    border-left: 20px solid black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    text-align: center;
+    /* font-size: 20px; */
+    color: #eeff8f;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+/* #MiniBankBookClosed2 p {
     Margin: 20px;
+} */
+
+/* ******************************* Skem Main Menu ************************************** */
+
+
+#centre {
+    display: inline;
+    text-align: center;
+    margin: auto;
 }
 
+#checkbalancedisable {
+    width:300px;
+    height:200px;
+    background-color: #c6c6c6;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #c6c6c6;
+    color: white;
+}
+
+#transferpaymentdisable {
+    width:300px;
+    height:200px;
+    background-color: #c6c6c6;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #c6c6c6;
+    color: white;
+}
+
+
+.optionbutton {
+    width:300px;
+    height:200px;
+    background-color: #0275d8;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
 

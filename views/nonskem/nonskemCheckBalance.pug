@@ -1,6 +1,35 @@
 html
   head
     title= title
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+ 
   body
-    a(href="/nonskem") HOME
-    h1= message
+    div.container
+      a(href="/nonskem") 
+        button#HomeButton HOME
+      h1.text-center= message
+      table.table.table-striped.table-bordered
+        thead
+          tr
+            th Date
+            th Type
+            th Recipient 
+            th Beginning Amount
+            th Amount Due
+            th Balance
+        tbody
+          each val in transactions
+            tr
+              td 
+                p #{val.Created_date}   
+              td 
+                p #{val.TypeOfPayment}
+              td 
+                p #{val.Recipient}  
+              td 
+                p #{val.BeginningAmount}   
+              td
+                p #{val.AmountDue} 
+              td
+                p #{val.Balance} 
+              
