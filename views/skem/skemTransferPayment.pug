@@ -8,7 +8,7 @@ html
       include ../../styles/styles.css
     
   body
-    div.container
+    div.container-fulid
       a(href="/skem") 
         button#HomeButton HOME
       h1 #{account.AccountName}
@@ -17,26 +17,17 @@ html
       form(method="POST" action='' enctype='application/json')
         #CheckBody
           #RowOne
-            #address
-              p
-                | Mr Henry Pickford, 
-                br
-                |  13 More Street, 
-                br
-                |             York, 
-                br
-                |  Yorkshire, 
-                br
-                |  YO6 2LD
+            
           
             h1#checkTitle National Bank of Hallam
+            p Date:
             input#Entry(type='date' name='Created_date' value='2018-11-15' )
           #RowTwo
-            #Entry Add New Recepient
-          #RowThree
-              .form-group
+            .form-group
                 p Name:
                 input#Entry(type='text' placeholder='Enter Name Here' name='Recipient')
+          #RowThree
+              .form-group
                 p Account Number: 
                 input#Entry(type='text' placeholder='Enter Account Number' name='AccountNumber') 
                 p Sort Code: 
@@ -45,34 +36,34 @@ html
             p Message: 
             input#Entry(type='text' placeholder='Enter Message' name='Message') 
             p Amount: &pound;
-            input#Entry(type='number' placeholder='Enter Amount' name='Amount' min="0" value="0")
+            input#Entry(type='number' placeholder='Enter Amount' name='AmountDue' min="0" value="0")
           #RowFive
             p 02984765634 574987 789 39875
             button#Checkbutton Confirm Transfer Payment
 
-    h1 Address Book
-    #AddressBook
-      #AddressBookLeft
-        #ArrowBoxLeft
-        #Information
-          | Name: Aaron Ellis 
-          br
-          br
-          |                 Account Number: 12345678 
-          br
-          br
-          |                 Sort code: 12-34-56
-        #AddressBookButton
-          | Select
-      #AddressBookRight
-        #ArrowBoxRight
-        #Information
-          | Name: James Ellis 
-          br
-          br
-          |                 Account Number: 12345678 
-          br
-          br
-          |                 Sort code: 12-34-56
-        #AddressBookButton
-          | Select
+    //- h1 Address Book
+    //- #AddressBook
+    //-   #AddressBookLeft
+    //-     #ArrowBoxLeft
+    //-     #Information
+    //-       | Name: Aaron Ellis 
+    //-       br
+    //-       br
+    //-       |                 Account Number: 12345678 
+    //-       br
+    //-       br
+    //-       |                 Sort code: 12-34-56
+    //-     #AddressBookButton
+    //-       | Select
+    //-   #AddressBookRight
+    //-     #ArrowBoxRight
+    //-     #Information
+    //-       | Name: James Ellis 
+    //-       br
+    //-       br
+    //-       |                 Account Number: 12345678 
+    //-       br
+    //-       br
+    //-       |                 Sort code: 12-34-56
+    //-     #AddressBookButton
+    //-       | Select

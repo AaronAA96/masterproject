@@ -2,8 +2,8 @@
 
 body {
     display: block;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: #eedfde;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
@@ -23,12 +23,13 @@ body h1 {
 /* ******************************* Check Book ************************************** */
 
 #CheckBody {
-    width: 900px;
+    width: 1000px;
     height: 350px;
     border: 20px solid #00bcd4;
     Background-color: #eeff8f;
     display: inline-block;
     margin-left: 13%;
+    align-self: center;
     
 }
 #Entry {
@@ -39,8 +40,8 @@ body h1 {
     display: inline-block;
 }
 #RowOne {
-    height: 50px;
-    width: 900px;
+    height: 70px;
+    width: 1000px;
     display: inline-block;
 }
 #RowOne p {
@@ -50,9 +51,10 @@ body h1 {
     padding-bottom: 10px;
 }
 #RowTwo {
-    padding: 20px 20px 0px 20px;
+    padding: 0px 40px 0px 20px;
     display: inline-block;
-    width: 900px;
+    width: 1000px;
+    height: 80px;
 }
 #RowTwo #Entry {
     display: inline-block;
@@ -60,14 +62,45 @@ body h1 {
     margin-right: 20px;
     width: 200px;
 }
-#RowThree {
-    height: 50px;
-    padding: 5px 0px 0px 5px;
+
+#RowOne p {
+    width:80px;
     display: inline-block;
-    width: 900px;
+    font-size: 26px;
+    padding-bottom: 10px;
 }
 
-#RowFour p {
+#RowTwo #Entry {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+#RowTwo .form-group p {
+    width:50px;
+    display: inline-block;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+#RowTwo .form-group  #Entry {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left:50px;
+    width: 800px;
+}
+
+#RowThree {
+    height: 50px;
+    padding: 0px 40px 0px 20px;
+    display: inline-block;
+    width: 1000px;
+    height: 50px;
+}
+
+#RowThree .form-group p {
     width: 120px;
     display: inline-block;
     font-size: 26px;
@@ -80,10 +113,10 @@ body h1 {
     width: 200px;
 }
 #RowFour {
-    height: 70px;
-    width: 900px;
+    height: 60px;
+    width: 1000px;
     display: inline-block;
-    padding: 0px 0px 10px 10px;
+    padding: 0px 40px 0px 20px;
 }
 #RowFour p {
     width: 130px;
@@ -94,14 +127,21 @@ body h1 {
 #RowFour .form-group p {
     width:50px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 26px;
     padding-bottom: 10px;
 }
 
 #RowThree .form-group p {
-    width:75px;
+    width: 250px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+#RowThree .form-group p:last-of-type {
+    width: 145px;
+    display: inline-block;
+    font-size: 26px;
     padding-bottom: 10px;
 }
 
@@ -110,18 +150,23 @@ body h1 {
     margin-right: 40px;
     width: 200px;
 }
+#RowFour #Entry {
+    display: inline-block;
+    margin-right: 70px;
+    width: 200px;
+}
 #RowFive {
     height: 70px;
     display: inline-block;
-    width: 900px;
-    padding: 0px 0px 0px 20px;
+    width: 1000px;
+    padding: 0px 40px 0px 20px;
 }
 #RowFive p {
     display: inline-block;
     font-size: 26px;
     padding-bottom: 10px;
-    width: 400px;
-    padding-right: 130px;
+    width: 600px;
+  
 }
 #RowFive #Checkbutton {
     font-size: 20px;
@@ -142,7 +187,10 @@ body h1 {
 
 #checkTitle {
     display: inline-block;
-    padding: 0px 70px 0px 220px;
+    padding-left: 140px;
+    padding-bottom: 0px;
+    padding-right: 100px;
+    padding-top: 30px;
     font: SourceSansPro;
     font-size: 40px;
     padding-bottom: 20px;

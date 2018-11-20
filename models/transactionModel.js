@@ -5,8 +5,7 @@ var TransactionSchema = new Schema({
     
     Created_date: 
     {
-        type: Date,
-        default: Date.now
+        type: String
     },
     TypeOfPayment:
     {

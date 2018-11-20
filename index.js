@@ -7,6 +7,7 @@ const port = 3000
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var _ = require('lodash');
 var compression = require('compression');
 var Transaction = require('./models/TransactionModel');
 var Account = require('./models/AccountModel');
@@ -53,10 +54,15 @@ process.on('SIGINT', function()
 //Bind connection to error event (to get notification of connection errors)
 // db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+// var db = mongoose.connection;
 
+// db.collection('accounts').drop();
 
+// db.collection('accounts').insertOne({AccountName: 'Current Account', CurrentAmount: 500, AvaliableAmount: 400, AccountID: '1'})
+// db.collection('accounts').insertOne({AccountName: 'Savings Account', CurrentAmount: 2000, AvaliableAmount: 2000, AccountID: '2'})
+const records = require('./db')
 
-
+let val = records.reload();
 
 
 // ************************************************ HOME ****************************************** //
@@ -102,7 +108,7 @@ app.param('AccountID', function(req, res, next, id)
 }).get('/nonskem/checkbalance/:AccountID', function(req, res) {
     
     
-    Transaction.find({AccountID: req.account.AccountID},function(err,feedback) {
+    Transaction.find({AccountID: req.account.AccountID} ,null , {sort: {Created_date: -1}},function(err,feedback) {
 
         console.log(feedback)
 
@@ -146,18 +152,44 @@ app.param('AccountID', function(req, res, next, id)
     var newTransaction = new Transaction(req.body);
     console.log(req.account)
     
-    newTransaction.AccountID = "1";
+    newTransaction.AccountID = req.account.AccountID;
     newTransaction.TypeOfPayment = "ONLINE";
     newTransaction.BeginningAmount = req.account.CurrentAmount;
-    newTransaction.Created_date = req.body.Created_date.getDate( ) + 1 + '/' + req.body.Created_date.getMonth( ) + 1 +'/' + req.body.Created_date.getFullYear( );
+    var date = new Date();
 
+    var dd = date.getDate();
+    var mm = date.getMonth()+1; 
+    var yyyy = date.getFullYear();
+    
+    date = dd + '/' + mm + '/' + yyyy;
+    newTransaction.Created_date = date.toString();
     newTransaction.Balance = req.account.CurrentAmount - req.body.AmountDue;
 
 
+    var account = req.account;
+    var update = req.body;
+    update.CurrentAmount = newTransaction.Balance;
+    account.CurrentAmount = newTransaction.Balance;
+    console.log(req.body);
+    console.log(req.account);
     Transaction.create(newTransaction)
     .then(function(newTransaction)
     {
-        res.redirect('/nonskem');
+        console.log(account);
+        _.merge(account, update);
+
+        account.save(function(err, saved)
+        {
+        if (err)
+        {
+            next(err);
+        }
+        else
+        {
+            res.redirect('/nonskem');
+        }
+    })
+        
     },  
     function(err) 
     {
@@ -180,8 +212,37 @@ app.get('/skem', function (req, res) {
 
 // ************************************************ checkbalance - Skem ****************************************** //
 
-app.get('/skem/checkbalance', function(req, res) {
-    res.render('skem/skemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance'})
+app.param('AccountID', function(req, res, next, id) 
+{
+   
+    console.log(id);
+    Account.findOne({AccountID : id})
+    .then(function(account)
+    {
+        if(!account) 
+        {
+            next(new Error('No account with that id.'));
+        }
+        else
+        {
+            
+            req.account = account; 
+            next();
+        }
+    }, function(err) 
+    {
+        next(err);
+    })
+}).get('/skem/checkbalance/:AccountID', function(req, res) {
+
+    
+    Transaction.find({AccountID: req.account.AccountID},null, {sort: {Created_date: -1}},function(err,feedback) {
+
+        console.log(feedback)
+
+        res.render('skem/skemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance', transactions: feedback})
+
+    });
 })
 
 // ************************************************ transferpayment - Skem ****************************************** //
@@ -220,18 +281,51 @@ app.param('AccountID', function(req, res, next, id)
 
   
     var newTransaction = new Transaction(req.body);
-    console.log(req.body.Amount);
+    console.log(req.account)
+    
+    newTransaction.AccountID = req.account.AccountID;
+    newTransaction.TypeOfPayment = "ONLINE";
+    newTransaction.BeginningAmount = req.account.CurrentAmount;
+    var date = new Date();
 
+    var dd = date.getDate();
+    var mm = date.getMonth()+1; 
+    var yyyy = date.getFullYear();
+    
+    date = dd + '/' + mm + '/' + yyyy;
+    newTransaction.Created_date = date.toString();
+    newTransaction.Balance = req.account.CurrentAmount - req.body.AmountDue;
+
+
+    var account = req.account;
+    var update = req.body;
+    update.CurrentAmount = newTransaction.Balance;
+    account.CurrentAmount = newTransaction.Balance;
+    console.log(req.body);
+    console.log(req.account);
     Transaction.create(newTransaction)
     .then(function(newTransaction)
     {
-        res.redirect('/skem');
+        console.log(account);
+        _.merge(account, update);
+
+        account.save(function(err, saved)
+        {
+        if (err)
+        {
+            next(err);
+        }
+        else
+        {
+            res.redirect('/skem');
+        }
+    })
+        
     },  
     function(err) 
     {
         next(err);
     });
-  
     
 })
 

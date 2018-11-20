@@ -8,6 +8,7 @@
     "compression": "^1.7.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "mongod": "^2.0.0",
     "mongoose": "^5.3.11",
     "pug": "^2.0.3"

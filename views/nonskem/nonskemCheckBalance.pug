@@ -5,8 +5,7 @@ html
  
   body
     div.container
-      a(href="/nonskem") 
-        button#HomeButton HOME
+      a.btn.btn-primary(href="/nonskem") HOME
       h1.text-center= message
       table.table.table-striped.table-bordered
         thead
@@ -27,9 +26,9 @@ html
               td 
                 p #{val.Recipient}  
               td 
-                p #{val.BeginningAmount}   
+                p &pound;#{val.BeginningAmount}   
               td
-                p #{val.AmountDue} 
+                p -&pound;#{val.AmountDue} 
               td
-                p #{val.Balance} 
+                p &pound;#{val.Balance} 
               

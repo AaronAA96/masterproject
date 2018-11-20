@@ -18,11 +18,17 @@ html
           #BlueType 
             p Type
           #BlueCompanies 
-            p Companies
+            p Recipient
         #CheckBalanceInformation
           #DateStrip
+            each val in transactions 
+              p #{val.Created_date}
           #TypeStrip
+            each val in transactions 
+              p #{val.TypeOfPayment}
           #CompaniesStrip
+            each val in transactions 
+              p #{val.Recipient}
       #CheckBalanceRight
         #CheckBalanceArrowBoxRight
         #LeftBlueBar
@@ -34,6 +40,12 @@ html
             p Balance
         #CheckBalanceInformation
           #BeginningAmountStrip
+            each val in transactions 
+              p &pound;#{val.BeginningAmount}
           #AmountDueStrip
+            each val in transactions 
+              p -&pound;#{val.AmountDue}
           #BalanceStrip
+            each val in transactions 
+              p &pound;#{val.Balance}
 
