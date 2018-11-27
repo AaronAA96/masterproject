@@ -5,30 +5,33 @@ html
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
     style
       include ../../styles/styles.css
-  body
-    h1= message
-    div
-      h1 what account would you like to use?
-      div#centre
-        each val in accounts
-          button(id="MiniBankBookClosed"+ val.AccountID)
-            p #{val.AccountName}
-            br
-            p Current amount: &pound;#{val.CurrentAmount}
-            br
-          
-      
-      h1 What service would you like to use?
-      div#centre
-        a#checkbalance
-          button#checkbalancedisable Check Balance
-        a#transferpayment
-          button#transferpaymentdisable Transfer Payment
-       
+  body.skemBack
+    
+      h1= message
+      br
+      div
+        h1 What account would you like to use?
+        br
+        div#centre
+          each val in accounts
+            button(id="MiniBankBookClosed"+ val.AccountID)
+              p #{val.AccountName}
+              br
+              p Current amount: &pound;#{val.CurrentAmount}
+              br
+            
+        br
+        h1 What service would you like to use?
+        br
+        div#centre
+          a#checkbalance
+            button#checkbalancedisable Check Balance
+          a#transferpayment
+            button#transferpaymentdisable Transfer Payment
+        
 
   script
     include ../../books.js
-//- (href="/skem/checkbalance") //
- 
-
   
+
+    

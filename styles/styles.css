@@ -8,6 +8,7 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 body h1 {
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -22,27 +23,126 @@ body h1 {
 
 /* ******************************* Check Book ************************************** */
 
+.skemBack {
+    background-color: #785f2c;
+background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+#check {
+   height: 400px;
+   width: 1230px;
+   box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
+    padding: -10px;
+}
+
 #CheckBody {
+    
     width: 1000px;
-    height: 350px;
+    height: 400px;
     border: 20px solid #00bcd4;
-    Background-color: #eeff8f;
+    border-left: 0px dashed black;
+    background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
-    margin-left: 13%;
-    align-self: center;
+    position: absolute;
+    margin-left: 240px;
+}
+#CheckBodyStub {
+    position: absolute;
+    height: 400px;
+    /* padding-bottom: 360px; */
+    Background-color: #eeff8f;
+    border-right: 3px dashed black;
+    border-top: 20px solid #00bcd4;
+    border-bottom: 20px solid #00bcd4;
+    display: inline-block;
+    background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+    box-shadow: 
+    0 0px 0px -15px rgba(0,0,0,0.5),
+    0 20px 20px -20px rgba(0,0,0,0.4),
+    0 0px 0px -30px rgba(0,0,0,0.3),
+    0 20px 10px -5px rgba(203,14,40,0.3);
+    margin-left: 100px;
+}
+#CheckBodyStub div {
+    margin-bottom: -141.5px;
+    margin-top: 280px;
+
+}
+#CheckBodyStub div p {
+    Margin-top: -80px;
+    font-size: 24px;
+    Margin-bottom: -20px;
+    margin-right: 10px;
+}
+
+
+
+#CheckBodyStubRoll {
+    width:150px;
+    height: 400px;
+    border-left: 0px solid #00bcd4;
+    position: absolute;
+    
+background: rgba(145,145,145,1);
+background: -moz-linear-gradient(left, rgba(145,145,145,1) 0%, rgba(145,145,145,1) 22%, rgba(246,246,246,1) 59%, rgba(238,255,143,1) 91%, rgba(238,255,143,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(145,145,145,1)), color-stop(22%, rgba(145,145,145,1)), color-stop(59%, rgba(246,246,246,1)), color-stop(91%, rgba(238,255,143,1)), color-stop(100%, rgba(238,255,143,1)));
+background: -webkit-linear-gradient(left, rgba(145,145,145,1) 0%, rgba(145,145,145,1) 22%, rgba(246,246,246,1) 59%, rgba(238,255,143,1) 91%, rgba(238,255,143,1) 100%);
+background: -o-linear-gradient(left, rgba(145,145,145,1) 0%, rgba(145,145,145,1) 22%, rgba(246,246,246,1) 59%, rgba(238,255,143,1) 91%, rgba(238,255,143,1) 100%);
+background: -ms-linear-gradient(left, rgba(145,145,145,1) 0%, rgba(145,145,145,1) 22%, rgba(246,246,246,1) 59%, rgba(238,255,143,1) 91%, rgba(238,255,143,1) 100%);
+background: linear-gradient(to right, rgba(145,145,145,1) 0%, rgba(145,145,145,1) 22%, rgba(246,246,246,1) 59%, rgba(238,255,143,1) 91%, rgba(238,255,143,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919191', endColorstr='#eeff8f', GradientType=1 );
+
+ 
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 70px 40px -20px rgba(0,0,0,0.4),
+    0 200px 70px -30px rgba(0,0,0,0.3),
+    0 70px 60px -5px rgba(203,14,40,0.3);
+    display: inline-block;
+    border-right: 1px solid black;
     
 }
 #Entry {
-    background-color: white;
+    background-color: #eeff8f;
     border: 1px solid black;
     width: 150px;
     padding: 5px;
     display: inline-block;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+}
+#RowOne #Entry {
+    background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+    border: 1px solid black;
+    width: 150px;
+    padding: 5px;
+    display: inline-block;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
 }
 #RowOne {
-    height: 70px;
-    width: 1000px;
+    height: 100px;
+    width: 980px;
     display: inline-block;
+    /* padding-bottom: 20px; */
+    background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+    border-bottom: 2px solid black;
+    
+   
 }
 #RowOne p {
     width: 120px;
@@ -78,18 +178,34 @@ body h1 {
 }
 
 #RowTwo .form-group p {
-    width:50px;
+    width: 90px;
     display: inline-block;
     font-size: 26px;
     padding-bottom: 10px;
+    padding-top: 10px;
+}
+#RowTwo .form-group p:last-of-type {
+    width: 20px;
+    display: inline-block;
+    font-size: 26px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 #RowTwo .form-group  #Entry {
     display: inline-block;
     margin-top: 30px;
     margin-right: 20px;
-    margin-left:50px;
-    width: 800px;
+    
+    width: 610px;
+}
+#RowTwo .form-group  #Entry:last-of-type {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    width: 180px;
+    background-color: white;
 }
 
 #RowThree {
@@ -110,7 +226,7 @@ body h1 {
 #RowThree #Entry {
     display: inline-block;
     margin-right: 20px;
-    width: 200px;
+    width: 700px;
 }
 #RowFour {
     height: 60px;
@@ -119,7 +235,7 @@ body h1 {
     padding: 0px 40px 0px 20px;
 }
 #RowFour p {
-    width: 130px;
+    width: 90px;
     display: inline-block;
     font-size: 26px;
     padding-bottom: 10px;
@@ -153,20 +269,24 @@ body h1 {
 #RowFour #Entry {
     display: inline-block;
     margin-right: 70px;
-    width: 200px;
+    width: 610px;
 }
 #RowFive {
-    height: 70px;
+    height: 50px;
     display: inline-block;
-    width: 1000px;
-    padding: 0px 40px 0px 20px;
+    width: 980px;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+    background-color: white;
+    border-top: 2px solid black;
+    padding: 20px 40px 50px 20px;
+
 }
 #RowFive p {
     display: inline-block;
     font-size: 26px;
     padding-bottom: 10px;
     width: 600px;
-  
+    font-family: OCR A Std, monospace;
 }
 #RowFive #Checkbutton {
     font-size: 20px;
@@ -196,6 +316,16 @@ body h1 {
     padding-bottom: 20px;
 }
 
+.scalene {
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    border-right: 40px solid transparent;
+    border-bottom: 150px solid #eeff8f;
+    border-left: 650px solid transparent;
+    
+    /* margin-left: 200px; */
+}
 /* ******************************* Address Book ************************************** */
 
 #AddressBook {
@@ -272,13 +402,18 @@ body h1 {
     display: inline-block;
     background-color: #89632c;
     border-radius: 30px;
-    margin-left: 13%;
-
+    margin-left:22%;
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
 }
 #CheckBalanceLeft {
     Width: 400px;
     height: 800px;
     background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     border: 10px solid #89632c;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -292,6 +427,7 @@ body h1 {
     Width: 400px;
     height: 800px;
     background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     border: 10px solid #89632c;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -336,6 +472,7 @@ body h1 {
     Width: 400px;
     height: 80px;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -344,6 +481,7 @@ body h1 {
     height: 80px;
     border-right: 2px solid #000000;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
     text-align: center;
 }
@@ -358,6 +496,7 @@ body h1 {
     height: 80px;
     border-right: 2px solid #000000;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
     text-align: center;
 }
@@ -371,6 +510,7 @@ body h1 {
     Width: 196px;
     height: 80px;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display:inline-block;
     text-align: center;
 }
@@ -385,6 +525,7 @@ body h1 {
     height: 80px;
     border-right: 2px solid #000000;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
     text-align: center;
 }
@@ -399,6 +540,7 @@ body h1 {
     height: 80px;
     border-right: 2px solid #000000;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
     text-align: center;
 }
@@ -412,6 +554,7 @@ body h1 {
     Width: 156px;
     height: 80px;
     background-color:#00bcd4;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display:inline-block;
     text-align: center;
 }
@@ -426,6 +569,7 @@ body h1 {
     Width: 100px;
     border-right: 2px solid #000000;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
     border-bottom-left-radius: 20px;
 }
@@ -435,6 +579,7 @@ body h1 {
     Width: 100px;
     border-right: 2px solid #000000;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -442,6 +587,7 @@ body h1 {
     height: 620px;
     width: 196px;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -450,6 +596,7 @@ body h1 {
     width: 140px;
     border-right: 2px solid #000000;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -458,6 +605,7 @@ body h1 {
     Width: 100px;
     border-right: 2px solid #000000;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -466,6 +614,7 @@ body h1 {
     width: 156px;
     border-bottom-right-radius: 20px;
     background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     display: inline-block;
 }
 
@@ -475,6 +624,7 @@ body h1 {
     width:350px;
     height:200px;
     background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     border-radius: 20px;
     border: 10px solid #89632c;
     border-bottom: 4px solid #89632c;
@@ -486,6 +636,11 @@ body h1 {
     display: inline-block;
     margin-left: 10%;
     margin-right: 10%;
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
 }
 /* #MiniBankBookOpen1 p {
     
@@ -495,6 +650,8 @@ body h1 {
     width:175px;
     height:200px;
     background-color: #3f51b5;
+    background-color: #004f8c;
+background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     border-radius: 20px;
     border: 2px solid black;
     border-left: 20px solid black;
@@ -506,6 +663,11 @@ body h1 {
     display: inline-block;
     margin-left: 10%;
     margin-right: 10%;
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
 }
 /* #MiniBankBookClosed1 p {
     Margin: 20px;
@@ -517,6 +679,7 @@ body h1 {
     width:350px;
     height:200px;
     background-color: #eeff8f;
+background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
     border-radius: 20px;
     border: 10px solid #89632c;
     border-bottom: 4px solid #89632c;
@@ -529,6 +692,11 @@ body h1 {
     margin-left: 10%;
     margin-right: 10%;
     Margin-right: 100px;
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
 }
 /* #MiniBankBookOpen2 p {
     
@@ -538,6 +706,8 @@ body h1 {
     width:175px;
     height:200px;
     background-color: #3f51b5;
+    background-color: #004f8c;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     border-radius: 20px;
     border: 2px solid black;
     border-left: 20px solid black;
@@ -549,7 +719,11 @@ body h1 {
     display: inline-block;
     margin-left: 10%;
     margin-right: 10%;
-    
+    box-shadow: 
+    0 20px 30px -15px rgba(0,0,0,0.5),
+    0 40px 40px -20px rgba(0,0,0,0.4),
+    0 70px 50px -30px rgba(0,0,0,0.3),
+    0 40px 60px -5px rgba(203,14,40,0.3);
 }
 /* #MiniBankBookClosed2 p {
     Margin: 20px;

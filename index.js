@@ -112,7 +112,7 @@ app.param('AccountID', function(req, res, next, id)
 
         console.log(feedback)
 
-        res.render('nonskem/nonskemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance', transactions: feedback})
+        res.render('nonskem/nonskemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance', transactions: feedback, account: req.account})
     });
  })
 
@@ -240,7 +240,7 @@ app.param('AccountID', function(req, res, next, id)
 
         console.log(feedback)
 
-        res.render('skem/skemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance', transactions: feedback})
+        res.render('skem/skemCheckBalance',{ title: 'Hallam Banking', message: 'Check Balance', transactions: feedback, account: req.account})
 
     });
 })

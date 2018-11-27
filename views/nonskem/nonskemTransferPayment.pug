@@ -2,30 +2,48 @@ html
   head
     title= title
     link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+    
+    
+    style
+      include ../../styles/bootstrap.css
   body
+    
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+      h1.text-center(style={color: 'White'})= message
     div.container
+      br
       a.btn.btn-primary(href="/nonskem") HOME
       h1 #{account.AccountName}
-      h1.text-center= message
-      form(method="POST" action='' enctype='application/json')
-        .form-group
-          label Name
-          input.form-control(type='text' placeholder='Enter Name Here' name='Recipient')
-          small#emailHelp.form-text.text-muted Enter the Account Name Here.
-        .form-group
-          label Account Number
-          input.form-control(type='text' placeholder='Enter Account Number' name='AccountNumber')
-          small#emailHelp.form-text.text-muted Enter the Account Number Here.
-        .form-group
-          label Sort Code
-          input.form-control(type='text' placeholder='Enter Sort Code' name='SortCode')
-          small#emailHelp.form-text.text-muted Enter the Sort Code Here.
-        .form-group
-          label Amount
-          input.form-control(type='number' placeholder='Enter Amount' name='AmountDue' min="0" value="0")
-          small#emailHelp.form-text.text-muted Enter the Amount Here.
-        .form-group
-          label Message
-          input.form-control(type='text' placeholder='Enter Message' name='Message')
-          small#emailHelp.form-text.text-muted Enter the Message Here.
-        button.btn.btn-primary(type='submit') Submit
+      h1.text-center Current Amount: £ #{account.CurrentAmount}
+      br
+      .row
+        .col
+        div.card.w-75.border-primary.col-10.col
+          form(method="POST" action='' enctype='application/json')
+            .form-group
+              .card-body
+                h2 Name
+                input.form-control(type='text' placeholder='Enter Name Here' name='Recipient').border-primary
+                small#emailHelp.form-text.text-muted Enter the Account Name Here.
+              .card-body
+                .form-group
+                  h2 Account Number
+                  input.form-control(type='text' placeholder='Enter Account Number' name='AccountNumber').border-primary
+                  small#emailHelp.form-text.text-muted Enter the Account Number Here.
+              .card-body
+                .form-group
+                  h2 Sort Code
+                  input.form-control(type='text' placeholder='Enter Sort Code' name='SortCode').border-primary
+                  small#emailHelp.form-text.text-muted Enter the Sort Code Here.
+              .card-body
+                .form-group
+                  h2 Amount
+                  input.form-control(type='number' placeholder='Enter Amount' name='AmountDue' min="0" value="0").border-primary
+                  small#emailHelp.form-text.text-muted Enter the Amount Here.
+              .card-body
+                .form-group
+                  h2 Message
+                  input.form-control(type='text' placeholder='Enter Message' name='Message').border-primary
+                  small#emailHelp.form-text.text-muted Enter the Message Here.
+                button.btn.btn-primary(type='submit') Submit
+        .col

@@ -7,63 +7,56 @@ html
     style
       include ../../styles/styles.css
     
-  body
-    div.container-fulid
-      a(href="/skem") 
-        button#HomeButton HOME
-      h1 #{account.AccountName}
-      h1= message
-      
-      form(method="POST" action='' enctype='application/json')
-        #CheckBody
-          #RowOne
+  body.skemBack 
+      div.container-fulid
+        a(href="/skem") 
+          button#HomeButton HOME
+        h1 #{account.AccountName}
+        h1 Current Amount: £ #{account.CurrentAmount}
+        h1= message
+        .scalene
+        form(method="POST" action='' enctype='application/json')
+          div#check 
+            #CheckBodyStubRoll
+            #CheckBodyStub
+              div
+                p Date_____
+                p £________
+                p Memo_____
+              
+            #CheckBody
             
-          
-            h1#checkTitle National Bank of Hallam
-            p Date:
-            input#Entry(type='date' name='Created_date' value='2018-11-15' )
-          #RowTwo
-            .form-group
-                p Name:
-                input#Entry(type='text' placeholder='Enter Name Here' name='Recipient')
-          #RowThree
-              .form-group
-                p Account Number: 
-                input#Entry(type='text' placeholder='Enter Account Number' name='AccountNumber') 
-                p Sort Code: 
-                input#Entry(type='text' placeholder='Enter Sort Code' name='SortCode') 
-          #RowFour
-            p Message: 
-            input#Entry(type='text' placeholder='Enter Message' name='Message') 
-            p Amount: &pound;
-            input#Entry(type='number' placeholder='Enter Amount' name='AmountDue' min="0" value="0")
-          #RowFive
-            p 02984765634 574987 789 39875
-            button#Checkbutton Confirm Transfer Payment
+              #RowOne
+                
+              
+                h1#checkTitle National Bank of Hallam
+                p Date:
+                input#Entry(type='date' name='Created_date' value='2018-11-27' )
+              #RowTwo
+                .form-group
+                    p Pay To:
+                    input#Entry(type='text' placeholder='Enter Name Here' name='Recipient')
+                    p &pound;
+                    input#Entry(type='number' placeholder='Enter Amount' name='AmountDue' onchange="update()"  min="0" value="0" )
+              #RowThree
+                  .form-group
+                    input#Entry(type='text' placeholder='' name='numbers' value="Zero Pounds" readonly)
+                    //- p Account Number: 
+                    //- input#Entry(type='text' placeholder='Enter Account Number' name='AccountNumber') 
+                    //- p Sort Code: 
+                    //- input#Entry(type='text' placeholder='Enter Sort Code' name='SortCode') 
+                    
+              #RowFour
+                p Memo: 
+                input#Entry(type='text' placeholder='Enter Message' name='Message') 
+                
+              #RowFive
+                p :0294372: "9382301: .234
+                button#Checkbutton Confirm Transfer Payment
+  script    
+    include ../../numbers.js
 
-    //- h1 Address Book
-    //- #AddressBook
-    //-   #AddressBookLeft
-    //-     #ArrowBoxLeft
-    //-     #Information
-    //-       | Name: Aaron Ellis 
-    //-       br
-    //-       br
-    //-       |                 Account Number: 12345678 
-    //-       br
-    //-       br
-    //-       |                 Sort code: 12-34-56
-    //-     #AddressBookButton
-    //-       | Select
-    //-   #AddressBookRight
-    //-     #ArrowBoxRight
-    //-     #Information
-    //-       | Name: James Ellis 
-    //-       br
-    //-       br
-    //-       |                 Account Number: 12345678 
-    //-       br
-    //-       br
-    //-       |                 Sort code: 12-34-56
-    //-     #AddressBookButton
-    //-       | Select
+
+
+
+

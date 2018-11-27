@@ -2,14 +2,21 @@ html
   head
     title= title
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
- 
+    style
+      include ../../styles/bootstrap.css
   body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+      h1.text-center(style={color: 'White'})= message
     div.container
+      br
       a.btn.btn-primary(href="/nonskem") HOME
-      h1.text-center= message
-      table.table.table-striped.table-bordered
+      br
+      br
+      h1 #{account.AccountName}
+      h1.text-center Current Amount: £ #{account.CurrentAmount}
+      table.table.table-hover
         thead
-          tr
+          tr.table-primary
             th Date
             th Type
             th Recipient 
